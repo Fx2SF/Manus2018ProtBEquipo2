@@ -32,43 +32,28 @@
         private void InitializeComponent()
         {
             this.btnCargarImagen = new System.Windows.Forms.Button();
-            this.picImagen = new System.Windows.Forms.PictureBox();
             this.btnConvertirImagen = new System.Windows.Forms.Button();
             this.txtResultado = new System.Windows.Forms.TextBox();
-            this.lblInfo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picImagen)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // btnCargarImagen
             // 
-            this.btnCargarImagen.Location = new System.Drawing.Point(12, 515);
+            this.btnCargarImagen.Location = new System.Drawing.Point(34, 120);
             this.btnCargarImagen.Name = "btnCargarImagen";
-            this.btnCargarImagen.Size = new System.Drawing.Size(113, 28);
+            this.btnCargarImagen.Size = new System.Drawing.Size(90, 28);
             this.btnCargarImagen.TabIndex = 1;
             this.btnCargarImagen.Text = "Cargar imagen";
             this.btnCargarImagen.UseVisualStyleBackColor = true;
             this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
             // 
-            // picImagen
-            // 
-            this.picImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picImagen.BackColor = System.Drawing.Color.White;
-            this.picImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picImagen.Location = new System.Drawing.Point(12, 12);
-            this.picImagen.Name = "picImagen";
-            this.picImagen.Size = new System.Drawing.Size(532, 497);
-            this.picImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picImagen.TabIndex = 0;
-            this.picImagen.TabStop = false;
-            // 
             // btnConvertirImagen
             // 
             this.btnConvertirImagen.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnConvertirImagen.Location = new System.Drawing.Point(992, 517);
+            this.btnConvertirImagen.Location = new System.Drawing.Point(152, 120);
             this.btnConvertirImagen.Name = "btnConvertirImagen";
-            this.btnConvertirImagen.Size = new System.Drawing.Size(113, 27);
+            this.btnConvertirImagen.Size = new System.Drawing.Size(94, 28);
             this.btnConvertirImagen.TabIndex = 3;
             this.btnConvertirImagen.Text = "Convertir imagen";
             this.btnConvertirImagen.UseVisualStyleBackColor = true;
@@ -78,35 +63,42 @@
             // 
             this.txtResultado.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtResultado.Location = new System.Drawing.Point(550, 12);
+            this.txtResultado.Location = new System.Drawing.Point(34, 12);
             this.txtResultado.Multiline = true;
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(555, 497);
+            this.txtResultado.Size = new System.Drawing.Size(212, 102);
             this.txtResultado.TabIndex = 2;
+            this.txtResultado.TextChanged += new System.EventHandler(this.txtResultado_TextChanged);
             // 
-            // lblInfo
+            // label1
             // 
-            this.lblInfo.AutoSize = true;
-            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblInfo.Location = new System.Drawing.Point(131, 523);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.Size = new System.Drawing.Size(10, 13);
-            this.lblInfo.TabIndex = 7;
-            this.lblInfo.Text = " ";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(127, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "label1";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(88, 74);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(112, 17);
+            this.progressBar1.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 566);
-            this.Controls.Add(this.lblInfo);
+            this.ClientSize = new System.Drawing.Size(285, 166);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConvertirImagen);
             this.Controls.Add(this.txtResultado);
             this.Controls.Add(this.btnCargarImagen);
-            this.Controls.Add(this.picImagen);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manus";
-            ((System.ComponentModel.ISupportInitialize)(this.picImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,10 +107,10 @@
         #endregion
 
         private System.Windows.Forms.Button btnCargarImagen;
-        private System.Windows.Forms.PictureBox picImagen;
         private System.Windows.Forms.Button btnConvertirImagen;
         private System.Windows.Forms.TextBox txtResultado;
-        private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
